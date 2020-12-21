@@ -53,3 +53,4 @@ if [ -f "$f" ];
 		fi;
 fi ;
 done;
+# some random text
