@@ -1,4 +1,4 @@
-
+#test comment
 TIMESTAMP=`date '+%Y%m%d_%H%M%S'`;
 pattern=$1
 
