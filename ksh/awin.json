@@ -1,0 +1,223 @@
+{
+ 
+        "Retention": 0,
+        "Name": "transactions6",
+ 
+        "TableType": "EXTERNAL_TABLE",
+        "LastAccessTime": 1534258458.0,
+        "StorageDescriptor": {
+            "Compressed": false,
+            "NumberOfBuckets": -1,
+            "Columns": [
+                {
+                    "Name": "id",
+                    "Type": "int"
+                },
+                {
+                    "Name": "url",
+                    "Type": "string"
+                },
+                {
+                    "Name": "advertiserid",
+                    "Type": "int"
+                },
+                {
+                    "Name": "publisherid",
+                    "Type": "int"
+                },
+                {
+                    "Name": "commissionsharingpublisherid",
+                    "Type": "string"
+                },
+                {
+                    "Name": "sitename",
+                    "Type": "string"
+                },
+                {
+                    "Name": "commissionstatus",
+                    "Type": "string"
+                },
+                {
+                    "Name": "commissionamount",
+                    "Type": "struct<amount:double,currency:string>"
+                },
+                {
+                    "Name": "saleamount",
+                    "Type": "struct<amount:double,currency:string>"
+                },
+                {
+                    "Name": "iphash",
+                    "Type": "string"
+                },
+                {
+                    "Name": "customercountry",
+                    "Type": "string"
+                },
+                {
+                    "Name": "clickrefs",
+                    "Type": "struct<clickRef:string,clickRef2:string,clickRef6:string,clickRef3:string>"
+                },
+                {
+                    "Name": "clickdate",
+                    "Type": "string"
+                },
+                {
+                    "Name": "transactiondate",
+                    "Type": "string"
+                },
+                {
+                    "Name": "validationdate",
+                    "Type": "string"
+                },
+                {
+                    "Name": "type",
+                    "Type": "string"
+                },
+                {
+                    "Name": "declinereason",
+                    "Type": "string"
+                },
+                {
+                    "Name": "vouchercodeused",
+                    "Type": "boolean"
+                },
+                {
+                    "Name": "vouchercode",
+                    "Type": "string"
+                },
+                {
+                    "Name": "lapsetime",
+                    "Type": "int"
+                },
+                {
+                    "Name": "amended",
+                    "Type": "boolean"
+                },
+                {
+                    "Name": "amendreason",
+                    "Type": "string"
+                },
+                {
+                    "Name": "oldsaleamount",
+                    "Type": "struct<amount:double,currency:string>"
+                },
+                {
+                    "Name": "oldcommissionamount",
+                    "Type": "struct<amount:double,currency:string>"
+                },
+                {
+                    "Name": "clickdevice",
+                    "Type": "string"
+                },
+                {
+                    "Name": "transactiondevice",
+                    "Type": "string"
+                },
+                {
+                    "Name": "publisherurl",
+                    "Type": "string"
+                },
+                {
+                    "Name": "advertisercountry",
+                    "Type": "string"
+                },
+                {
+                    "Name": "orderref",
+                    "Type": "string"
+                },
+                {
+                    "Name": "customparameters",
+                    "Type": "array<struct<key:string,value:string>>"
+                },
+                {
+                    "Name": "transactionparts",
+                    "Type": "array<struct<commissionGroupId:int,amount:double,commissionAmount:double,commissionGroupCode:string,commissionGroupName:string>>"
+                },
+                {
+                    "Name": "paidtopublisher",
+                    "Type": "boolean"
+                },
+                {
+                    "Name": "paymentid",
+                    "Type": "int"
+                },
+                {
+                    "Name": "transactionqueryid",
+                    "Type": "int"
+                },
+                {
+                    "Name": "originalsaleamount",
+                    "Type": "string"
+                }
+            ],
+            "BucketColumns": [],
+            "SortColumns": [],
+            "OutputFormat": "org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat",
+            "StoredAsSubDirectories": false,
+            "InputFormat": "org.apache.hadoop.mapred.TextInputFormat",
+            "Parameters": {
+                "compressionType": "none",
+                "CrawlerSchemaDeserializerVersion": "1.0",
+                "jsonPath": "$[*]",
+                "CrawlerSchemaSerializerVersion": "1.0",
+                "averageRecordSize": "1180",
+                "objectCount": "1",
+                "classification": "json",
+                "UPDATED_BY_CRAWLER": "awin-10",
+                "recordCount": "4424111",
+                "typeOfData": "file",
+                "sizeKey": "5388585228"
+            },
+"Location":"werwe",
+            "SerdeInfo": {
+                "SerializationLibrary": "org.openx.data.jsonserde.JsonSerDe",
+                "Parameters": {
+                    "paths": "advertiserCountry,advertiserId,amendReason,amended,clickDate,clickDevice,clickRefs,commissionAmount,commissionSharingPublisherId,commissionStatus,customParameters,customerCountry,declineReason,id,ipHash,lapseTime,oldCommissionAmount,oldSaleAmount,orderRef,originalSaleAmount,paidToPublisher,paymentId,publisherId,publisherUrl,saleAmount,siteName,transactionDate,transactionDevice,transactionParts,transactionQueryId,type,url,validationDate,voucherCode,voucherCodeUsed"
+                }
+            }
+        },
+        "PartitionKeys": [
+            {
+                "Name": "affiliate_network",
+                "Type": "string"
+            },
+            {
+                "Name": "number_of_days",
+                "Type": "string"
+            },
+            {
+                "Name": "year",
+                "Type": "string"
+            },
+            {
+                "Name": "month",
+                "Type": "string"
+            },
+            {
+                "Name": "day",
+                "Type": "string"
+            },
+            {
+                "Name": "daily_occurence",
+                "Type": "string"
+            },
+            {
+                "Name": "country_iso",
+                "Type": "string"
+            }
+        ],
+        "Owner": "owner",
+        "Parameters": {
+            "compressionType": "none",
+            "CrawlerSchemaDeserializerVersion": "1.0",
+            "jsonPath": "$[*]",
+            "CrawlerSchemaSerializerVersion": "1.0",
+            "averageRecordSize": "1180",
+            "objectCount": "1",
+            "classification": "json",
+            "UPDATED_BY_CRAWLER": "awin-10",
+            "recordCount": "4424111",
+            "typeOfData": "file",
+            "sizeKey": "5388585228"
+        }
+    }
