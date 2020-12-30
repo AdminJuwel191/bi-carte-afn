@@ -1,0 +1,11 @@
+version: 0.0
+os: linux
+runas: airflow
+
+files:
+- source: /
+  destination: /var/git/carte_afn/
+hooks:
+  ApplicationStart:
+    - location: server.sh
+      timeout: 300
